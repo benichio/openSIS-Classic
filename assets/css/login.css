@@ -97,8 +97,12 @@ body {
 }
 
 body {
-    background           : #51afc9 url(../images/login_bg.jpg) no-repeat center center;
-    background-size      : cover;
+    color                : #173a2d;
+    background           : #f4f7ed;
+    background-image     : radial-gradient(circle at 12% 18%, rgba(105, 171, 51, 0.22) 0 8px, transparent 9px),
+        radial-gradient(circle at 88% 78%, rgba(105, 171, 51, 0.16) 0 10px, transparent 11px),
+        linear-gradient(135deg, #ffffff 0%, #f3f8ed 45%, #eaf2df 100%);
+    background-size      : 120px 120px, 170px 170px, cover;
     background-attachment: fixed;
 }
 
@@ -111,13 +115,15 @@ body {
 }
 
 .btn.btn-success {
-    background-color: #54be2a;
+    background-color: #005128;
     text-transform  : uppercase;
-    border-color    : #4db425;
+    border-color    : #005128;
     font-weight     : 700;
     font-size       : 16px;
-    border-radius   : 40px;
-    padding         : 8px;
+    border-radius   : 8px;
+    padding         : 11px;
+    letter-spacing  : 0;
+    box-shadow      : 0 10px 18px rgba(0, 81, 40, 0.18);
 }
 
 .btn-rounded {
@@ -139,6 +145,12 @@ body {
 .open>.dropdown-toggle.btn-success:hover {
     background-color: #49af21;
     border-color    : #49af21;
+}
+
+.btn.btn-success:hover,
+.btn.btn-success:focus {
+    background-color: #d7192f;
+    border-color: #d7192f;
 }
 
 .form-group {
@@ -177,16 +189,17 @@ body {
 
 .panel {
     background   : #fff;
-    width        : 450px;
+    width        : 460px;
     margin       : 0 auto;
-    border-radius: 4px;
+    border-radius: 8px;
     margin-top   : 10vh;
-    box-shadow   : 0 0 40px rgba(0, 0, 0, 0.3);
+    box-shadow   : 0 24px 60px rgba(0, 81, 40, 0.22);
     border       : 0;
+    overflow     : hidden;
 }
 
 .login .panel {
-    width: 450px;
+    width: 460px;
 }
 
 .login-info {
@@ -200,34 +213,37 @@ body {
 }
 
 .panel .panel-heading {
-    background             : #f4f6f6;
+    background             : #ffffff;
     padding                : 0;
-    border-top-left-radius : 4px;
-    border-top-right-radius: 4px;
+    border-top-left-radius : 8px;
+    border-top-right-radius: 8px;
     position               : relative;
     z-index                : 3;
 }
 
 .panel .panel-heading h3 {
-    color        : #3b2c2c;
-    font-size    : 14px;
+    color        : #005128;
+    font-size    : 13px;
     text-align   : center;
-    background   : #dee0e1;
+    background   : #f5f8ee;
     display      : block;
     width        : 100%;
-    padding      : 6px;
-    font-weight  : 600;
+    padding      : 10px 12px;
+    font-weight  : 700;
     margin-bottom: 0;
+    text-transform: uppercase;
 }
 
 .panel .panel-heading .logo {
     box-sizing: border-box;
     text-align: center;
-    padding   : 20px 0 0;
+    padding   : 24px 34px 18px;
 }
 
 .panel .panel-heading .logo img {
-    /*width: 170px;*/
+    max-width: 100%;
+    width: 350px;
+    height: auto;
 }
 
 .panel .panel-heading .logo .site-slogan {
@@ -239,7 +255,7 @@ body {
 }
 
 .panel .panel-body {
-    padding   : 35px 45px;
+    padding   : 32px 45px 38px;
     text-align: left;
 }
 
@@ -249,12 +265,17 @@ body {
 
 .panel .panel-body .form-control {
     border       : 0;
-    border-bottom: 2px solid #e4e4e4;
+    border-bottom: 2px solid #dce6d5;
     box-shadow   : none;
     border-radius: 0;
     font-size    : 16px;
     line-height  : 30px;
     height       : 40px;
+}
+
+.panel .panel-body .form-control:focus {
+    border-bottom-color: #005128;
+    box-shadow: 0 1px 0 #005128;
 }
 
 .panel .panel-body .form-control.username {
@@ -289,7 +310,7 @@ html[dir="rtl"] .panel .panel-body .form-control.password {
 .language-selection i {
     margin-right: 5px;
     position : absolute;
-    color    : #666;
+    color    : #005128;
     left     : 11px;
     font-size: 21px;
     top      : 10px;
@@ -318,6 +339,11 @@ html[dir="rtl"] .select2-selection--single .select2-selection__rendered {
 .select2-selection--single {
     border-bottom: 2px solid #e4e4e4 !important;
     height       : auto;
+}
+
+.select2-container--focus .select2-selection--single,
+.select2-container--open .select2-selection--single {
+    border-bottom-color: #005128 !important;
 }
 
 .school-logo {
@@ -382,16 +408,17 @@ html[dir="rtl"] .select2-selection--single .select2-selection__rendered {
 
 footer {
     text-align: center;
-    color     : #fff;
+    color     : #005128;
     font-size : 12px;
     padding   : 10px 0 25px;
-    width     : 450px;
+    width     : 460px;
     margin    : 0 auto;
+    font-weight: 500;
 }
 
 footer a {
     text-decoration: none;
-    color          : #fff;
+    color          : #005128;
 }
 
 footer a:hove {
@@ -403,8 +430,8 @@ footer a:hove {
     top                    : -1px;
     left                   : -1px;
     width                  : calc(100% + 2px);
-    border-top-left-radius : 4px;
-    border-top-right-radius: 4px;
+    border-top-left-radius : 8px;
+    border-top-right-radius: 8px;
     z-index                : 2;
 }
 
@@ -420,14 +447,14 @@ footer a:hove {
 
 .loader1 {
     width     : 100%;
-    background: #34a853;
+    background: #005128;
     z-index   : 1;
     animation : one 2s ease-out infinite;
 }
 
 .loader2 {
     width     : 0%;
-    background: #4285f4;
+    background: #78aa38;
     z-index   : 2;
     animation : two 2s ease-out infinite;
 }
@@ -435,14 +462,14 @@ footer a:hove {
 .loader3 {
     width     : 0%;
     z-index   : 3;
-    background: #fbbc05;
+    background: #9fcf5a;
     animation : three 2s ease-out infinite;
 }
 
 .loader4 {
     width     : 0%;
     z-index   : 4;
-    background: #ea4335;
+    background: #d7192f;
     animation : four 2s ease-out infinite;
 }
 
@@ -480,9 +507,9 @@ footer a:hove {
 }
 
 .styled-radio input[type=radio]:checked+span:before {
-    background     : #49af21 url('../images/icon_check_white.svg') no-repeat center;
+    background     : #005128 url('../images/icon_check_white.svg') no-repeat center;
     background-size: 12px;
-    border-color   : #49af21;
+    border-color   : #005128;
 }
 
 
@@ -1984,5 +2011,24 @@ html[dir="rtl"] .checkbox.checkbox-switch label span {
 
     footer a {
         color: #1E88E5;
+    }
+}
+@media (max-width: 520px) {
+    .login .panel,
+    .panel,
+    footer {
+        width: calc(100% - 30px);
+    }
+    .panel .panel-heading .logo {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+    .panel .panel-body {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+    footer,
+    footer a {
+        color: #005128;
     }
 }

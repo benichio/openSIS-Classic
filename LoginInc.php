@@ -93,10 +93,10 @@ require_once('functions/langFnc.php');
             <div class="panel">
 
                 <div class="panel-heading">
-                    <div class="logo">
-                        <img src="assets/images/opensis_logo.png" alt="openSIS" />
-                    </div>                    
-                    <h3><?= _studentInformationSystem ?></h3>
+                    <div class="logo lucky-kids-logo">
+                        <img src="assets/images/lucky-kids-logo.jpg" alt="Lucky Kids School of English" />
+                    </div>
+                    <h3>School Management Portal</h3>
                 </div>
                 <div class="panel-body">
 

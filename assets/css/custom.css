@@ -1,5 +1,14 @@
 body {
-    background: #e7e9ef;
+    background: #f4f7ed;
+}
+
+/* Lucky Kids brand layer */
+:root {
+    --lucky-green: #005128;
+    --lucky-green-soft: #eef6e8;
+    --lucky-leaf: #78aa38;
+    --lucky-red: #d7192f;
+    --lucky-ink: #173a2d;
 }
 
 .inline-block {
@@ -40,7 +49,7 @@ html[dir="rtl"] .table tr td[align="left"] {
 }
 
 .navbar-inverse #navbar-mobile.navbar-collapse {
-    border-color: #ced2d7;
+    border-color: rgba(0, 81, 40, 0.18);
 }
 
 .form-inline .form-group {
@@ -90,7 +99,7 @@ html[dir="rtl"] .pull-right {
     right: 42%;
     z-index: 999;
     color: #fff;
-    background: #d81c37;
+    background: var(--lucky-red);
     padding: 8px 15px 9px 11px;
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0,0,0,0.6);
@@ -104,11 +113,11 @@ html[dir="rtl"] .pull-right {
 .sidebar-control {
     float: left;
     padding: 10px 12px;
-    color: #666;
-    border: 1px solid #e4e4e4;
-    border-radius: 2px;
+    color: var(--lucky-green);
+    border: 1px solid rgba(0, 81, 40, 0.18);
+    border-radius: 8px;
     margin: 6px 0 6px 20px;
-    background: #f3f3f3;
+    background: var(--lucky-green-soft);
 }
 html[dir="rtl"] .sidebar-control {
     float: right;
@@ -129,9 +138,29 @@ label.radio {
 .navbar-brand > img {
     height: 35px;
 }
+.navbar.navbar-inverse.bg-white {
+    background: #fff !important;
+    border-bottom: 3px solid var(--lucky-green);
+    box-shadow: 0 2px 14px rgba(0, 81, 40, 0.12);
+}
+.lucky-kids-navbar-brand {
+    width: 245px;
+    background: #fff;
+}
+.lucky-kids-navbar-brand > img {
+    height: 39px;
+    max-width: 205px;
+    object-fit: contain;
+}
 .navbar-inverse .navbar-nav > li > a,
 .navbar-inverse .navbar-nav > li > a:hover {
-    color: #666;
+    color: var(--lucky-ink);
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    background: var(--lucky-green-soft);
+    color: var(--lucky-green);
 }
 
 #navbar-mobile .form-group,
@@ -166,7 +195,7 @@ html[dir="rtl"] #navbar-mobile form {
     -moz-box-shadow: none;
 }
 .breadcrumb-line:not([class*="bg-"]) {
-    background-color: #5090c1;
+    background-color: var(--lucky-green);
     color: #fff;
 }
 
@@ -316,7 +345,7 @@ ul[id*="select2-period-"] {
     text-transform: none;
 }
 .nav-pills.nav-pills-primary li.active a {
-    background: #5090c1;
+    background: var(--lucky-green);
 }
 .panel-body > .nav-pills li a {
     border-radius: 0
@@ -485,7 +514,7 @@ ul[id*="select2-period-"] {
         top: 0;
         left: -100%;
         transition: all 0.3s ease;
-        background: #5090C1;
+        background: var(--lucky-green);
         z-index: 999;
         overflow-y: auto;
     }
@@ -565,4 +594,139 @@ ul[id*="select2-period-"] {
     .text-lg-right { text-align: right; }
     .text-lg-center { text-align: center; }
     .text-lg-justify { text-align: justify; }
+}
+/* Lucky Kids sidebar and navigation */
+
+.sidebar .sidebar-content {
+    border-radius: 8px;
+}
+
+.sidebar:not(.sidebar-default) .sidebar-content,
+.sidebar .sidebar-content {
+    background-color: #ffffff;
+}
+.sidebar-main .navigation-main,
+.sidebar-main .category-content.no-padding {
+    background: #ffffff;
+}
+.sidebar-main .navigation-main > li > ul {
+    background: #f8fbf4;
+}
+.sidebar-main .navigation-main > li > a,
+.sidebar-main .navigation-main > li ul li > a {
+    color: var(--lucky-ink);
+}
+.sidebar-main .navigation-main > li.active > a,
+.sidebar-main .navigation-main > li.active > a:hover,
+.sidebar-main .navigation-main > li.active > a:focus,
+.sidebar-main .navigation-main > li ul li.current-submenu > a,
+.sidebar-main .navigation-main > li ul li.current-submenu > a:hover,
+.sidebar-main .navigation-main > li ul li.current-submenu > a:focus {
+    background: var(--lucky-green) !important;
+    color: #fff !important;
+}
+.sidebar-main .navigation-main > li > a:hover,
+.sidebar-main .navigation-main > li > a:focus,
+.sidebar-main .navigation-main > li ul li > a:hover,
+.sidebar-main .navigation-main > li ul li > a:focus {
+    background: var(--lucky-green-soft) !important;
+    color: var(--lucky-green) !important;
+}
+.sidebar-main .navigation-main > li > a.has-ul:after,
+.sidebar-main .navigation-main > li.active > a.has-ul:after {
+    color: inherit;
+}
+.bg-primary,
+a.bg-primary:hover,
+a.bg-primary:focus {
+    background-color: var(--lucky-green) !important;
+    border-color: var(--lucky-green) !important;
+}
+.text-primary,
+.text-primary:hover,
+.text-primary:focus {
+    color: var(--lucky-green) !important;
+}
+.select2-container--focus .select2-selection--single:not([class*=bg-]):not([class*=border-]),
+.select2-container--open .select2-selection--single:not([class*=bg-]):not([class*=border-]) {
+    border-bottom-color: var(--lucky-green);
+    box-shadow: 0 1px 0 var(--lucky-green);
+}
+.nav-pills.nav-pills-primary li.active a {
+    background: var(--lucky-green);
+}
+.sidebar-user-material .category-content {
+    background: linear-gradient(135deg, rgba(0, 81, 40, 0.95), rgba(120, 170, 56, 0.88));
+}
+.sidebar-user-material .category-content:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.2) 0 14px, transparent 15px),
+        radial-gradient(circle at 78% 28%, rgba(255, 255, 255, 0.14) 0 11px, transparent 12px);
+    pointer-events: none;
+}
+.sidebar-user-material .category-content {
+    position: relative;
+    overflow: hidden;
+}
+.sidebar-user-material-content,
+.sidebar-user-material-menu {
+    position: relative;
+    z-index: 1;
+}
+.sidebar-user-material-menu > a {
+    background-color: rgba(0, 61, 30, 0.78);
+}
+.category-content:hover .sidebar-user-material-menu > a,
+.sidebar-user-material-menu > a:focus,
+.sidebar-user-material-menu > a[aria-expanded="true"] {
+    background-color: rgba(215, 25, 47, 0.86);
+}
+.sidebar-user-material .navigation-wrapper {
+    background-color: var(--lucky-green);
+}
+.navigation-main > li.active > a,
+.navigation-main > li.active > a:hover,
+.navigation-main > li.active > a:focus,
+.navigation-main > li.current-submenu > a,
+.navigation-main > li ul li.current-submenu > a {
+    background: var(--lucky-green);
+    color: #fff;
+}
+.navigation-main > li > a:hover,
+.navigation-main > li > a:focus,
+.navigation-main > li ul li > a:hover,
+.navigation-main > li ul li > a:focus {
+    background: var(--lucky-green-soft);
+    color: var(--lucky-green);
+}
+.navigation-main > li > a > i {
+    color: var(--lucky-leaf);
+}
+.navigation-main > li.active > a > i {
+    color: #fff;
+}
+.btn-primary,
+.btn-success {
+    background-color: var(--lucky-green);
+    border-color: var(--lucky-green);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-success:hover,
+.btn-success:focus {
+    background-color: var(--lucky-red);
+    border-color: var(--lucky-red);
+}
+@media (max-width: 768px) {
+    .lucky-kids-navbar-brand {
+        width: 210px;
+    }
+    .lucky-kids-navbar-brand > img {
+        max-width: 175px;
+    }
+    .sidebar-main {
+        background: var(--lucky-green);
+    }
 }

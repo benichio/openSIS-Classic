@@ -179,7 +179,7 @@ echo '<div id="loading-image"><i class="fa fa-cog fa-spin fa-lg fa-fw"></i> ' . 
 echo '<div class="navbar navbar-inverse bg-white">
             <div class="navbar-header">
                 <a class="sidebar-control sidebar-main-toggle hidden-xs" data-popup="tooltip" data-placement="bottom" data-container="body" data-original-title="Collapse Menu"><i class="icon-paragraph-justify3"></i></a>
-                <a class="navbar-brand" href="javascript:void(0)" onclick="check_content(\'Ajax.php?modname=miscellaneous/Portal.php\');" onmousedown="document.getElementById(\'header\').innerHTML = \'Home\'; document.getElementById(\'cframe\').src = \'Bottom.php?modcat=home\'"><img src="assets/opensis_logo.png" alt=""></a>
+                <a class="navbar-brand lucky-kids-navbar-brand" href="javascript:void(0)" onclick="check_content(\'Ajax.php?modname=miscellaneous/Portal.php\');" onmousedown="document.getElementById(\'header\').innerHTML = \'Home\'; document.getElementById(\'cframe\').src = \'Bottom.php?modcat=home\'"><img src="assets/images/lucky-kids-logo.jpg" alt="Lucky Kids School of English"></a>
 
                 <ul class="nav navbar-nav visible-xs-block">
                     <li><a data-toggle="collapse" data-target="#navbar-mobile" data-container="body"><i class="icon-grid2"></i></a></li>
